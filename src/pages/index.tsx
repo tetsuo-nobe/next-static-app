@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link  from "next/link";
 import { Geist_Mono } from "next/font/google";
 
 const geistMono = Geist_Mono({
@@ -17,6 +18,7 @@ export default function Home() {
       </Head>
       <main>
         <p className={geistMono.className}>ルートページです。</p>
+         <Link href='/about' key='ToAbout' >aboutページへ移動</Link>
       </main>
     </>
   );
