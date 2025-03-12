@@ -6,8 +6,8 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export default function Home() {
-   return (
+export default function About() {
+  return (
     <>
       <Head>
         <title>Create Next App</title>
@@ -16,8 +16,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <p className={geistMono.className}>ルートページです。</p>
+        <p className={geistMono.className}>アバウトページです。</p>
       </main>
     </>
   );
 }
+

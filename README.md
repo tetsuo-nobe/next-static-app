@@ -1,3 +1,33 @@
+
+## パス
+/ --> /index.html
+
+/about --> /about/index.html
+
+## static export 時は next-config.js に下記を追記する
+
+https://nextjs.org/docs/app/building-your-application/deploying/static-exports
+
+```
+output: 'export',
+```
+
+-　そして下記を実行することで、outディレクトリにエクスポートされる
+
+```
+npm run build
+```
+
+- エクスポートされたものを S3 へのアップロード
+
+```
+cd out
+
+aws s3 sync . s3://tnobe-next-static-app --delete
+```
+
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
 
 ## Getting Started
